@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Job</title>
+</head>
+<body>
+    <h1>Post Job</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.role_details.label }} {{ form.role_details(size=32) }}<br>
+        {{ form.apply_by.label }} {{ form.apply_by() }}<br>
+        {{ form.cgpa_cutoff.label }} {{ form.cgpa_cutoff(size=32) }}<br>
+        {{ form.accepted_branches.label }} {{ form.accepted_branches(size=32) }}<br>
+        {{ form.ctc.label }} {{ form.ctc(size=32) }}<br>
+        {{ form.submit() }}
+    </form>
+</body>
+</html>

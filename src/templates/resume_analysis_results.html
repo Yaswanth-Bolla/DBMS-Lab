@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    <h2>Matched Keywords</h2>
+    <ul>
+        {% for keyword in results.matched_keywords %}
+        <li>{{ keyword }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Missing Keywords</h2>
+    <ul>
+        {% for keyword in results.missing_keywords %}
+        <li>{{ keyword }}</li>
+        {% endfor %}
+    </ul>
+    <p>Score: {{ results.score }}%</p>
+</body>
+</html> 

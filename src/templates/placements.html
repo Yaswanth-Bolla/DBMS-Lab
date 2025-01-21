@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placements</title>
+</head>
+<body>
+    <h1>Placements</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.student_name.label }} {{ form.student_name(size=32) }}<br>
+        {{ form.company.label }} {{ form.company(size=32) }}<br>
+        {{ form.position.label }} {{ form.position(size=32) }}<br>
+        {{ form.submit() }}
+    </form>
+    <h2>All Placements</h2>
+    <ul>
+        {% for placement in placements %}
+            <li>{{ placement.job_title }} at {{ placement.company_name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

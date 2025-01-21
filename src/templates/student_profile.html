@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+</head>
+<body>
+    <h1>Update Profile</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.usn.label }} {{ form.usn(size=32) }}<br>
+        {{ form.name.label }} {{ form.name(size=32) }}<br>
+        {{ form.cgpa.label }} {{ form.cgpa(size=32) }}<br>
+        {{ form.email.label }} {{ form.email(size=32) }}<br>
+        {{ form.branch.label }} {{ form.branch(size=32) }}<br>
+        {{ form.no_of_backlogs.label }} {{ form.no_of_backlogs(size=32) }}<br>
+        {{ form.submit() }}
+    </form>
+</body>
+</html>

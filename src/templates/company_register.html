@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Registration</title>
+</head>
+<body>
+    <h1>Company Registration</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }} {{ form.name(size=32) }}<br>
+        {{ form.domain.label }} {{ form.domain(size=32) }}<br>
+        {{ form.poc.label }} {{ form.poc(size=32) }}<br>
+        {{ form.submit() }}
+    </form>
+</body>
+</html>

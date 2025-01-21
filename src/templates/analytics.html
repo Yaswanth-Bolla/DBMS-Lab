@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Analytics</title>
+</head>
+<body>
+    <h1>Placement Statistics</h1>
+    <p>Total Students: {{ stats.total_students }}</p>
+    <p>Total Companies: {{ stats.total_companies }}</p>
+    <p>Total Interviews: {{ stats.total_interviews }}</p>
+    <p>Total Offers: {{ stats.total_offers }}</p>
+    <p>Placed Students: {{ stats.placed_students }}</p>
+    <p>Company Success Rate: {{ stats.company_success_rate }}%</p>
+    
+    <form action="{{ url_for('export_report') }}" method="get">
+        <button type="submit">Export Report as PDF</button>
+    </form>
+</body>
+</html> 
